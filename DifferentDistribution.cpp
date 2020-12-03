@@ -318,6 +318,9 @@ double FractalNetwork::FisherDis(double theta, double  kappa)
 }
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%//
 // von Mises-Fisher distribution on a unit sphere
+// The method is adopted from the paper:
+// G. Kurz and U. D. Hanebeck. Stochastic sampling of the hyperspherical von Mises-Fisher distribution without rejection methods. In 2015 Sensor Data  
+// Fusion: Trends, Solutions, Applications (SDF), pages 1{6. IEEE, 2015.
 pointcor3D FractalNetwork::VMFisherDis(pointcor3D mu, double kappa)// this is the von-mises fisher distirbution on a 3D sphere
 {
 	pointcor3D result;
@@ -361,10 +364,7 @@ pointcor3D FractalNetwork::VMFisherDis(pointcor3D mu, double kappa)// this is th
  
 }
 
- 
-
-
-
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%//
 double FractalNetwork::sign(double x)
 {
 	if (x > 0)
@@ -376,14 +376,13 @@ double FractalNetwork::sign(double x)
 
 
 }
-
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%//
 double FractalNetwork::angle(complex<double> h)
 {
 	double result = atan2(imag(h), real(h));
 	return result;
 }
-
-
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%//
 
 
  
